@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>POSITRON ELEKTRONIK - IoT Monitoring Demo</title>
+    <meta
+      name="description"
+      content="IoT monitoring demos for temperature, power, water level, and machine counters using sensors, dashboards, and Telegram or WhatsApp alerts."
+    />
+    <meta property="og:title" content="POSITRON ELEKTRONIK - IoT Monitoring Demo" />
+    <meta
+      property="og:description"
+      content="Prototype-first IoT monitoring for temperature, power, water level, and machines."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#136f63" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="lang-en">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="POSITRON ELEKTRONIK">
+        <span class="brand-mark">P</span>
+        <span>POSITRON ELEKTRONIK</span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#demo" data-en="Demos" data-id="Demo">Demos</a>
+        <a href="#included" data-en="Included" data-id="Isi Paket">Included</a>
+        <a href="#packages" data-en="Price" data-id="Harga">Price</a>
+        <a class="nav-cta" href="#contact" data-en="Contact" data-id="Kontak">Contact</a>
+        <button class="lang-toggle" type="button" aria-label="Switch language">ID</button>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow" data-en="IoT monitoring for real field problems" data-id="IoT monitoring untuk masalah lapangan">
+            IoT monitoring for real field problems
+          </p>
+          <h1
+            data-en="Monitoring tools for temperature, power, water, and machines with visible results."
+            data-id="Alat monitoring suhu, listrik, air, dan mesin yang bisa dilihat hasilnya."
+          >
+            Monitoring tools for temperature, power, water, and machines with visible results.
+          </h1>
+          <p
+            class="lead"
+            data-en="A demo showroom for sensor-based IoT products, dashboards, and Telegram or WhatsApp alerts for warehouses, cold storage, panels, hydroponics, and small operations."
+            data-id="Showroom demo produk IoT berbasis sensor, dashboard, dan alarm Telegram atau WhatsApp untuk gudang, cold storage, panel listrik, hidroponik, dan usaha kecil."
+          >
+            A demo showroom for sensor-based IoT products, dashboards, and Telegram or WhatsApp alerts for
+            warehouses, cold storage, panels, hydroponics, and small operations.
+          </p>
+          <div class="hero-actions">
+            <a
+              class="button primary whatsapp-link"
+              href="https://wa.me/6285883802041?text=Hi%20POSITRON%20ELEKTRONIK%2C%0AI%20want%20to%20discuss%20an%20IoT%20monitoring%20demo.%0A%0AProblem%3A%0ALocation%3A%0ASensor%20points%3A%0APhotos%20available%3A"
+              target="_blank"
+              rel="noreferrer"
+              data-en="Discuss Your Monitoring Problem"
+              data-id="Konsultasi via WhatsApp"
+            >
+              Discuss Your Monitoring Problem
+            </a>
+            <a class="button secondary" href="#demo" data-en="View Demos" data-id="Lihat Demo">
+              View Demos
+            </a>
+          </div>
+          <dl class="hero-stats" aria-label="Service summary">
+            <div>
+              <dt data-en="3-7 days" data-id="3-7 hari">3-7 days</dt>
+              <dd data-en="prototype target" data-id="target prototype">prototype target</dd>
+            </div>
+            <div>
+              <dt>1 point</dt>
+              <dd data-en="start small first" data-id="mulai kecil dulu">start small first</dd>
+            </div>
+            <div>
+              <dt data-en="Evidence" data-id="Bukti">Evidence</dt>
+              <dd data-en="demo before scale-up" data-id="demo sebelum scale-up">demo before scale-up</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-visual" aria-label="Monitoring dashboard preview">
+          <div class="device">
+            <div class="device-top">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="dashboard">
+              <div class="dash-header">
+                <div>
+                  <small data-en="Cold Storage A" data-id="Cold Storage A">Cold Storage A</small>
+                  <strong data-en="Monitoring Active" data-id="Monitoring Aktif">Monitoring Active</strong>
+                </div>
+                <span class="status" data-en="Online" data-id="Online">Online</span>
+              </div>
+              <div class="metric-grid">
+                <div class="metric">
+                  <span data-en="Temp" data-id="Suhu">Temp</span>
+                  <strong>4.8°C</strong>
+                  <em data-en="Safe" data-id="Aman">Safe</em>
+                </div>
+                <div class="metric warning">
+                  <span>Panel</span>
+                  <strong>8.2A</strong>
+                  <em data-en="Rising" data-id="Naik">Rising</em>
+                </div>
+                <div class="metric">
+                  <span data-en="Humidity" data-id="Kelembapan">Humidity</span>
+                  <strong>61%</strong>
+                  <em data-en="Stable" data-id="Stabil">Stable</em>
+                </div>
+              </div>
+              <div class="chart" aria-hidden="true">
+                <span style="height: 38%"></span>
+                <span style="height: 50%"></span>
+                <span style="height: 44%"></span>
+                <span style="height: 62%"></span>
+                <span style="height: 58%"></span>
+                <span style="height: 70%"></span>
+                <span style="height: 46%"></span>
+                <span style="height: 54%"></span>
+              </div>
+              <div class="alert">
+                <strong data-en="Telegram Alert" data-id="Alarm Telegram">Telegram Alert</strong>
+                <span
+                  data-en="Temperature passed 8°C limit at 14:32"
+                  data-id="Suhu melewati batas 8°C pukul 14:32"
+                >
+                  Temperature passed 8°C limit at 14:32
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="sensor-card">
+            <span class="sensor-led"></span>
+            <div>
+              <strong>Node Sensor 01</strong>
+              <small data-en="ESP32 + sensor + field enclosure" data-id="ESP32 + sensor + casing lapangan">
+                ESP32 + sensor + field enclosure
+              </small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section intro">
+        <div>
+          <p class="eyebrow" data-en="Built for small business operations" data-id="Cocok untuk bisnis kecil dan operasional">
+            Built for small business operations
+          </p>
+          <h2
+            data-en="Start from recurring operational problems, not from complicated technology."
+            data-id="Mulai dari masalah yang sering terjadi, bukan dari teknologi yang rumit."
+          >
+            Start from recurring operational problems, not from complicated technology.
+          </h2>
+        </div>
+        <p
+          data-en="The goal is simple: data can be read, alerts arrive when conditions are abnormal, and the owner can act without constant manual checking."
+          data-id="Targetnya sederhana: data terbaca, alarm masuk saat kondisi tidak normal, dan pemilik tempat bisa mengambil keputusan tanpa cek manual terus-menerus."
+        >
+          The goal is simple: data can be read, alerts arrive when conditions are abnormal, and the
+          owner can act without constant manual checking.
+        </p>
+      </section>
+
+      <section class="section trust-section" aria-label="Trust signals">
+        <div class="trust-grid">
+          <div>
+            <strong data-en="Prototype-first" data-id="Prototype dulu">Prototype-first</strong>
+            <span
+              data-en="Test one sensor point before buying a larger installation."
+              data-id="Uji satu titik sensor sebelum membeli instalasi besar."
+            >
+              Test one sensor point before buying a larger installation.
+            </span>
+          </div>
+          <div>
+            <strong data-en="Field-oriented" data-id="Orientasi lapangan">Field-oriented</strong>
+            <span
+              data-en="Sensors, enclosures, alerts, and dashboard flow are adjusted to the actual site."
+              data-id="Sensor, casing, alarm, dan dashboard disesuaikan dengan kondisi tempat."
+            >
+              Sensors, enclosures, alerts, and dashboard flow are adjusted to the actual site.
+            </span>
+          </div>
+          <div>
+            <strong data-en="Clear handover" data-id="Serah terima jelas">Clear handover</strong>
+            <span
+              data-en="You get wiring notes, basic usage steps, and alert threshold documentation."
+              data-id="Kamu mendapat catatan wiring, cara pakai dasar, dan dokumentasi batas alarm."
+            >
+              You get wiring notes, basic usage steps, and alert threshold documentation.
+            </span>
+          </div>
+          <div>
+            <strong data-en="Built by an electronics engineer" data-id="Dibuat oleh engineer elektronik">
+              Built by an electronics engineer
+            </strong>
+            <span
+              data-en="Hardware, firmware, wiring, and field testing are handled as one practical system."
+              data-id="Hardware, firmware, wiring, dan testing lapangan ditangani sebagai satu sistem praktis."
+            >
+              Hardware, firmware, wiring, and field testing are handled as one practical system.
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section id="demo" class="section">
+        <div class="section-heading">
+          <p class="eyebrow" data-en="Product demos" data-id="Demo produk">Product demos</p>
+          <h2
+            data-en="Example devices that can be built and customized."
+            data-id="Contoh alat yang bisa dibuat dan dikembangkan."
+          >
+            Example devices that can be built and customized.
+          </h2>
+        </div>
+
+        <div class="demo-grid">
+          <article class="demo-card">
+            <div class="demo-media temp">
+              <span>4.8°C</span>
+              <small data-en="Temperature alert active" data-id="Alarm suhu aktif">Temperature alert active</small>
+            </div>
+            <div class="demo-body">
+              <h3 data-en="Temperature & Humidity Monitoring" data-id="Monitoring Suhu & Kelembapan">
+                Temperature & Humidity Monitoring
+              </h3>
+              <p
+                data-en="For cold storage, material warehouses, small server rooms, incubators, and controlled environments."
+                data-id="Untuk cold storage, gudang bahan, server kecil, inkubator, dan ruangan yang perlu dijaga kondisinya."
+              >
+                For cold storage, material warehouses, small server rooms, incubators, and controlled environments.
+              </p>
+              <ul>
+                <li data-en="Temperature/humidity sensor" data-id="Sensor suhu/kelembapan">Temperature/humidity sensor</li>
+                <li data-en="Realtime dashboard" data-id="Dashboard real-time">Realtime dashboard</li>
+                <li data-en="Telegram/WhatsApp alert" data-id="Alarm Telegram/WhatsApp">Telegram/WhatsApp alert</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="demo-card">
+            <div class="demo-media power">
+              <span>8.2A</span>
+              <small data-en="Panel current rising" data-id="Arus panel naik">Panel current rising</small>
+            </div>
+            <div class="demo-body">
+              <h3 data-en="Electrical Panel Monitoring" data-id="Monitoring Listrik Panel">
+                Electrical Panel Monitoring
+              </h3>
+              <p
+                data-en="Reads current, voltage, energy, and load status for small panels, pumps, machines, or business installations."
+                data-id="Membaca arus, tegangan, energi, dan status beban untuk panel kecil, pompa, mesin, atau instalasi usaha."
+              >
+                Reads current, voltage, energy, and load status for small panels, pumps, machines, or business installations.
+              </p>
+              <ul>
+                <li>PZEM / CT sensor</li>
+                <li data-en="Power consumption log" data-id="Log konsumsi listrik">Power consumption log</li>
+                <li data-en="Abnormal condition notification" data-id="Notifikasi kondisi abnormal">
+                  Abnormal condition notification
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="demo-card">
+            <div class="demo-media water">
+              <span>72%</span>
+              <small data-en="Tank water level" data-id="Level tandon">Tank water level</small>
+            </div>
+            <div class="demo-body">
+              <h3 data-en="Water Level & Pump Control" data-id="Water Level & Pompa">
+                Water Level & Pump Control
+              </h3>
+              <p
+                data-en="Monitors water level and pump status, then sends alerts when the tank is low or the pump runs too long."
+                data-id="Memantau level air, status pompa, dan memberi alarm saat air rendah atau pompa bekerja terlalu lama."
+              >
+                Monitors water level and pump status, then sends alerts when the tank is low or the pump runs too long.
+              </p>
+              <ul>
+                <li data-en="Water level sensor" data-id="Sensor level air">Water level sensor</li>
+                <li data-en="Pump relay control" data-id="Kontrol relay pompa">Pump relay control</li>
+                <li data-en="Daily level history" data-id="Riwayat level harian">Daily level history</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="demo-card">
+            <div class="demo-media machine">
+              <span>1,284</span>
+              <small data-en="Production counter" data-id="Counter produksi">Production counter</small>
+            </div>
+            <div class="demo-body">
+              <h3 data-en="Machine Production Counter" data-id="Counter Mesin Produksi">
+                Machine Production Counter
+              </h3>
+              <p
+                data-en="Counts output, operating hours, simple downtime, and productivity estimates for small machines."
+                data-id="Menghitung output, jam operasi, downtime sederhana, dan estimasi produktivitas mesin kecil."
+              >
+                Counts output, operating hours, simple downtime, and productivity estimates for small machines.
+              </p>
+              <ul>
+                <li data-en="Proximity / limit switch input" data-id="Input proximity / limit switch">
+                  Proximity / limit switch input
+                </li>
+                <li data-en="Daily counter" data-id="Counter harian">Daily counter</li>
+                <li data-en="CSV data export" data-id="Export data CSV">CSV data export</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="included" class="section included-section">
+        <div class="section-heading">
+          <p class="eyebrow" data-en="What buyers get" data-id="Yang diterima pembeli">What buyers get</p>
+          <h2
+            data-en="A practical package, not just a loose sensor board."
+            data-id="Paket praktis, bukan hanya board sensor lepas."
+          >
+            A practical package, not just a loose sensor board.
+          </h2>
+        </div>
+        <div class="included-grid">
+          <article>
+            <span>01</span>
+            <h3 data-en="Sensor node" data-id="Node sensor">Sensor node</h3>
+            <p
+              data-en="ESP32-based device with selected sensor, power setup, and enclosure plan for the use case."
+              data-id="Perangkat berbasis ESP32 dengan sensor pilihan, skema power, dan rencana casing sesuai kebutuhan."
+            >
+              ESP32-based device with selected sensor, power setup, and enclosure plan for the use case.
+            </p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3 data-en="Dashboard" data-id="Dashboard">Dashboard</h3>
+            <p
+              data-en="Simple realtime view for key readings, device status, and recent history."
+              data-id="Tampilan realtime sederhana untuk pembacaan utama, status perangkat, dan riwayat terbaru."
+            >
+              Simple realtime view for key readings, device status, and recent history.
+            </p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3 data-en="Alerts" data-id="Alarm">Alerts</h3>
+            <p
+              data-en="Telegram or WhatsApp notification when readings pass the agreed threshold."
+              data-id="Notifikasi Telegram atau WhatsApp saat pembacaan melewati batas yang disepakati."
+            >
+              Telegram or WhatsApp notification when readings pass the agreed threshold.
+            </p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3 data-en="Documentation" data-id="Dokumentasi">Documentation</h3>
+            <p
+              data-en="Basic wiring notes, component list, setup steps, and maintenance notes."
+              data-id="Catatan wiring dasar, daftar komponen, langkah setup, dan catatan maintenance."
+            >
+              Basic wiring notes, component list, setup steps, and maintenance notes.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="packages" class="section pricing-section">
+        <div class="section-heading">
+          <p class="eyebrow" data-en="Starter packages" data-id="Paket awal">Starter packages</p>
+          <h2
+            data-en="Start small, then scale when the problem is proven."
+            data-id="Mulai kecil dulu, lalu naik kalau masalahnya terbukti."
+          >
+            Start small, then scale when the problem is proven.
+          </h2>
+        </div>
+        <div class="pricing-grid">
+          <article class="price-card">
+            <h3 data-en="Light Audit" data-id="Audit Ringan">Light Audit</h3>
+            <p class="price" data-en="Rp150-300k" data-id="Rp150-300 ribu">Rp150-300k</p>
+            <p
+              data-en="Check monitoring needs, sensor points, internet access, and cost estimate."
+              data-id="Cek kebutuhan monitoring, titik sensor, koneksi internet, dan estimasi biaya."
+            >
+              Check monitoring needs, sensor points, internet access, and cost estimate.
+            </p>
+            <small data-en="Best for deciding whether the site is worth monitoring." data-id="Cocok untuk memastikan lokasi layak dimonitor.">
+              Best for deciding whether the site is worth monitoring.
+            </small>
+          </article>
+          <article class="price-card highlighted">
+            <h3 data-en="1-Point Prototype" data-id="Prototype 1 Titik">1-Point Prototype</h3>
+            <p class="price" data-en="Rp1-2 million" data-id="Rp1-2 juta">Rp1-2 million</p>
+            <p
+              data-en="One sensor node, simple dashboard, alert, and short documentation."
+              data-id="1 node sensor, dashboard sederhana, alarm, dan dokumentasi singkat."
+            >
+              One sensor node, simple dashboard, alert, and short documentation.
+            </p>
+            <small
+              data-en="Typical target: 3-7 days after component availability is confirmed."
+              data-id="Target umum: 3-7 hari setelah ketersediaan komponen jelas."
+            >
+              Typical target: 3-7 days after component availability is confirmed.
+            </small>
+          </article>
+          <article class="price-card">
+            <h3 data-en="Small Installation" data-id="Instalasi Kecil">Small Installation</h3>
+            <p class="price" data-en="From Rp5 million" data-id="Mulai Rp5 juta">From Rp5 million</p>
+            <p
+              data-en="3-5 sensor points, dashboard, installation, testing, and usage handover."
+              data-id="3-5 titik sensor, dashboard, pemasangan, testing, dan training pemakaian."
+            >
+              3-5 sensor points, dashboard, installation, testing, and usage handover.
+            </p>
+            <small
+              data-en="Final price depends on sensor type, enclosure, distance, and installation condition."
+              data-id="Harga final tergantung tipe sensor, casing, jarak, dan kondisi pemasangan."
+            >
+              Final price depends on sensor type, enclosure, distance, and installation condition.
+            </small>
+          </article>
+        </div>
+      </section>
+
+      <section id="process" class="section process">
+        <div class="section-heading">
+          <p class="eyebrow" data-en="Workflow" data-id="Cara kerja">Workflow</p>
+          <h2
+            data-en="A short build process so results can be seen quickly."
+            data-id="Alur pengerjaan dibuat pendek supaya cepat kelihatan hasilnya."
+          >
+            A short build process so results can be seen quickly.
+          </h2>
+        </div>
+        <ol class="steps">
+          <li>
+            <span>01</span>
+            <strong data-en="Describe the problem" data-id="Ceritakan masalah">Describe the problem</strong>
+            <p
+              data-en="Example: temperature rises unnoticed, pumps are left running, panels overload, or machine data is still manual."
+              data-id="Contoh: suhu sering naik, pompa lupa mati, panel overload, atau data mesin masih manual."
+            >
+              Example: temperature rises unnoticed, pumps are left running, panels overload, or machine data is still manual.
+            </p>
+          </li>
+          <li>
+            <span>02</span>
+            <strong data-en="Build a prototype" data-id="Buat prototipe">Build a prototype</strong>
+            <p
+              data-en="Sensor, firmware, dashboard, and alerts are built for one point first."
+              data-id="Sensor, firmware, dashboard, dan alarm dibuat untuk 1 titik dulu."
+            >
+              Sensor, firmware, dashboard, and alerts are built for one point first.
+            </p>
+          </li>
+          <li>
+            <span>03</span>
+            <strong data-en="Test on site" data-id="Uji di lapangan">Test on site</strong>
+            <p
+              data-en="Data is compared with real conditions, then alert limits and enclosure details are adjusted."
+              data-id="Data dibandingkan dengan kondisi nyata, lalu batas alarm dan casing disesuaikan."
+            >
+              Data is compared with real conditions, then alert limits and enclosure details are adjusted.
+            </p>
+          </li>
+          <li>
+            <span>04</span>
+            <strong data-en="Scale up" data-id="Perbanyak titik">Scale up</strong>
+            <p
+              data-en="If the prototype is useful, the system can be expanded to more points."
+              data-id="Kalau prototype terbukti berguna, sistem bisa diperbanyak ke titik lain."
+            >
+              If the prototype is useful, the system can be expanded to more points.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <section id="contact" class="contact">
+        <div>
+          <p class="eyebrow" data-en="Contact" data-id="Kontak">Contact</p>
+          <h2
+            data-en="Need a monitoring demo for your site?"
+            data-id="Mau dibuatkan demo untuk tempat kamu?"
+          >
+            Need a monitoring demo for your site?
+          </h2>
+          <p
+            data-en="Send the problem you want to monitor, usage location, number of sensor points, and photos of the area or panel if available."
+            data-id="Kirim masalah yang ingin dipantau, lokasi penggunaan, jumlah titik sensor, dan foto area/panel jika ada."
+          >
+            Send the problem you want to monitor, usage location, number of sensor points, and photos of the area or panel if available.
+          </p>
+        </div>
+        <a
+          class="button primary whatsapp-link"
+          href="https://wa.me/6285883802041?text=Hi%20POSITRON%20ELEKTRONIK%2C%0AI%20want%20to%20discuss%20an%20IoT%20monitoring%20demo.%0A%0AProblem%3A%0ALocation%3A%0ASensor%20points%3A%0APhotos%20available%3A"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span data-en="WhatsApp +62 858-8380-2041" data-id="WhatsApp +62 858-8380-2041">
+            WhatsApp +62 858-8380-2041
+          </span>
+        </a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>POSITRON ELEKTRONIK</span>
+      <span
+        data-en="IoT monitoring demos, embedded systems, and hardware prototypes."
+        data-id="Demo IoT monitoring, embedded system, dan hardware prototype."
+      >
+        IoT monitoring demos, embedded systems, and hardware prototypes.
+      </span>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "POSITRON ELEKTRONIK",
+        "description": "IoT monitoring, embedded system, and hardware prototype service.",
+        "telephone": "+62 858-8380-2041",
+        "areaServed": "Indonesia",
+        "url": "https://example.com"
+      }
+    </script>
+  </body>
+</html>
